@@ -1,6 +1,6 @@
 # NumericalMethodsAlgorithms
 
-This repository contains three folders, each containing one function and one README.md file describing the purpose of that function
+This repository contains several folders, each containing one function and one README.md file describing the purpose of that function
 
 ### False Position
 #### Created: 19 Feb 2018
