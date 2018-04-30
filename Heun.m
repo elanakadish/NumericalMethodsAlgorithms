@@ -36,16 +36,16 @@ while ea < es && iter < maxit %the loop will continue as long as the approximate
         ea = abs((ycorrection - y)/ycorrection); %approximate error = abs((new-old)/new)
         y = ycorrection; %put what is stored in ycorrection into y for the next iteration 
         
-        if rem(tend, h) ~= 0 %if the final number in tspan is not divisible by the step size h, then the final iteration will need to be altered
-            
-            y = dydt(
-            slopeleft = dydt(c,y);
-            ynew = y + h*slopeleft;
-            sloperight = dydt(tend, ynew);
-            ycorrection(c) = y + (h/2)*(slopeleft+ sloperight);
-        else
-            ; %If this is not the case, nothing needs to be done 
-        end
+%         if rem(tend, h) ~= 0 %if the final number in tspan is not divisible by the step size h, then the final iteration will need to be altered
+%             
+%             y = dydt(
+%             slopeleft = dydt(c,y);
+%             ynew = y + h*slopeleft;
+%             sloperight = dydt(tend, ynew);
+%             ycorrection(c) = y + (h/2)*(slopeleft+ sloperight);
+%         else
+%             ; %If this is not the case, nothing needs to be done 
+%         end
         iter = iter + 1; %add one to the counter;
     end 
 end
